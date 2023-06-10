@@ -1,5 +1,6 @@
 #link{
-margin-left: 1250px ;
-
-
+    display: flex;
+    align-items:center;
+    color: blue;
+    padding: 10px;
 }

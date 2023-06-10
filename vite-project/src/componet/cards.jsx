@@ -27,12 +27,12 @@ export default function Cards() {
     const handleSubmit= (e)=>{
         e.preventDefault();
         //console.log(form1Data.email);
-        if(formData.email==form1Data.email && formData.username==form1Data.username &&  formData.password==form1Data.password ){
+        if(formData.username==form1Data.username &&  formData.password==form1Data.password ){
             //console.log(formData.email);
           alert("wellcome ^-^ "+formData.username )
           window.location.href = './allcards'
            }else{
-            alert("You are not allowed to enter")
+            alert("the user name or password is wrong ): ")
            }
     }
   
@@ -65,13 +65,6 @@ return (
           name="username"
           placeholder="Enter your user name "
           onChange={(e) => setForm1Data({ ...form1Data, username: e.target.value })}/>
-            </FormControl>
-            <FormControl id="email">
-              <FormLabel>Email</FormLabel>
-              <Input rounded="md" type="email"  
-          name="email"
-          placeholder="Enter your email address"
-          onChange={(e) => setForm1Data({ ...form1Data, email: e.target.value })}/>
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>

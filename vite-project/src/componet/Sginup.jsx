@@ -20,8 +20,12 @@ const SplitWithImage = () => {
         e.preventDefault();
         if (formData.email.length>=5 && formData.password.length>=4 && formData.username.length>=3) {
             window.location.href = '/cards';
-          } else {
-            alert("you are not alowed to enter")
+          } else if(formData.email.length<=5 ) {
+            alert("the email is wrong")
+          }else if(formData.password.length<=4 ) {
+            alert("the passwrd is too short")
+          }else if(formData.username.length<=3 ) {
+            alert("the user name is too short")
           }
         // Save the form data to local storage
         localStorage.setItem('formData', JSON.stringify(formData));

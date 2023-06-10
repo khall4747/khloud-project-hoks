@@ -7,6 +7,7 @@ import CardsLogin from './componet/cards'
 import { Link } from 'react-router-dom'
 import Nav1 from './componet/Nav1'
 import { useState } from 'react'
+import { Box } from '@chakra-ui/react'
 //import { useState } from 'react'
 function App() {
  //const linkText =()=>{
@@ -31,7 +32,9 @@ function App() {
   return (
     <>
     <Nav1/>
-    <Link to="/login" id="link"onClick={handleChange} >{condition && element}</Link> 
+    <Box id="link"> <Link to="/login" onClick={handleChange} >{condition && element}</Link> </Box>
+    
+   
    <Routes>
     <Route path="/" element={<Sginup/>}/>
     <Route path="/cards" element={<Cards1/>}/>

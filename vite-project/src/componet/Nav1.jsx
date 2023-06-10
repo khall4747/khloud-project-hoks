@@ -32,7 +32,7 @@ export default function Nav1() {
 
   return (
     <Container maxW="7xl" p={{ base: 5, md: 10 }}>
-      <Flex mb="30px" align="center">
+      <Flex mb="0px" align="center">
        
          
             <Box p="2">

@@ -1,4 +1,4 @@
-import { Card, CardBody, CardFooter,Image ,Stack,Text,Divider,Heading,ButtonGroup,Button,Box,Input} from '@chakra-ui/react'
+import { Card, CardBody, CardFooter,Image ,Stack,Text,Divider,Heading,ButtonGroup,Button,Box,Input, Center} from '@chakra-ui/react'
 
 import  Img1 from'./pexels-kat-smith-548375.jpg'
 import Img2 from './pexels-karolina-grabowska-4207567.jpg'
@@ -14,6 +14,7 @@ export default function Allcards() {
   // console.log(input);
  // for(let hed of heds){
      //console.log(hed);
+     
  if(heds.includes(input)){
        return alert("We have this type of rose ✅")
       
@@ -34,9 +35,12 @@ export default function Allcards() {
   // console.log({item});
    //  </>
     // ))}
+    
+
+
   return (
    <>
-
+    
    <Stack d={['none', 'none', 'block']} width='400px' >
             <Input rounded="md" 
              value={input} onChange={(e)=>setInput(e.target.value)}
@@ -56,10 +60,12 @@ export default function Allcards() {
               </Button>
           
             </Stack>
+           
+            <Center>
    <Box display= "flex"
   flex-wrap= "wrap" >
     <Box width="100%"
-  margin={{base:"0 0px",md:"0 0px",lg:"0 0px"}}>
+  margin={{base:"0 0px",md:"0 0px",lg:"0 0px"}} >
    <Card maxW={{base:"sm",md:"sm",lg:"xxl"}} margin="30px"  >
   <CardBody>
     <Image 
@@ -148,8 +154,8 @@ export default function Allcards() {
   </CardFooter>
 </Card>
 </Box>
- <Box width="100%"
-  margin="0 -15px">
+ <Box width="100%" 
+  margin={{base:"0 0px",md:"0 0px",lg:"0 0px"}}>
 <Card maxW={{base:"sm",md:"sm",lg:"xxl"}} margin="30px" >
   <CardBody>
     <Image
@@ -240,7 +246,9 @@ export default function Allcards() {
 </Card>
 
 </Box>
+
 </Box>
+</Center>
 <Footer/>
    </>
   )
